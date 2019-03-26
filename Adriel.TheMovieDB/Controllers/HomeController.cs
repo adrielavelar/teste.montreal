@@ -19,6 +19,11 @@ namespace Adriel.TheMovieDB.Controllers
             return View();
         }
 
+        public ActionResult Search(string text, FormCollection formCollection)
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
