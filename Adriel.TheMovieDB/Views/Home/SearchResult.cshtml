@@ -49,9 +49,11 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <b>@item.title</b>
-                                        <br />
-                                        @item.overview
+                                        <a href="@Url.Action("MovieDetails", "Home", new { Id = @item.id})" target="_blank" style="color: rgb(255, 255, 255)">
+                                            <b>@item.title</b>
+                                            <br />
+                                            @item.overview
+                                        </a>
                                     </td>
                                     <td>@item.release_date</td>
                                     <td>@item.vote_average</td>
