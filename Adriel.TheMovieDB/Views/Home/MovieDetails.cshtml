@@ -7,10 +7,66 @@
 @using (Html.BeginForm())
 {
     <fieldset>
-        <row>
-            <div class="col-md-12">
-
+        <br />
+        <row class="form-group">
+            <div class="img">
+                <img src="@Html.Raw("https://image.tmdb.org/t/p/original" + @ViewBag.Movie.backdrop_path)"/>
+            </div>
+        </row>
+        <row class="form-inline">
+            <div>
+                @Html.Label("Title:", new { style = "font-weight: bold" })
+            </div>
+            <div>
+                &nbsp @ViewBag.Movie.original_title
+            </div>
+        </row>
+        <row class="form-inline">
+            <div>
+                @Html.Label("Release Date:", new { style = "font-weight: bold" })
+            </div>
+            <div>
+                &nbsp @ViewBag.Movie.release_date
+            </div>
+        </row>
+        <row class="form-inline">
+            <div>
+                @Html.Label("Overview:", new { style = "font-weight: bold" })
+            </div>
+            <div>
+                &nbsp @ViewBag.Movie.overview
+            </div>
+        </row>
+        <row class="form-inline">
+            <div>
+                @Html.Label("Home Page:", new { style = "font-weight: bold" })
+            </div>
+            <div>
+                &nbsp <a href="@ViewBag.Movie.homepage">@ViewBag.Movie.homepage</a>
             </div>
         </row>
     </fieldset>
 }
+
+
+<style>
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .portrait {
+        height: 80px;
+        width: 30px;
+    }
+
+    .landscape {
+        height: 30px;
+        width: 80px;
+    }
+
+    .square {
+        height: 75px;
+        width: 75px;
+    }
+</style>

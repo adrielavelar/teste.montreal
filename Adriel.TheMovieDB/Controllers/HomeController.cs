@@ -33,7 +33,7 @@ namespace Adriel.TheMovieDB.Controllers
         public ActionResult MovieDetails(long Id)
         {
             var movie = _movieController.GetMovieDetails(Id);
-            ViewBag.Movie = movie;
+            ViewBag.Movie = movie.Result;
 
             return View();
         }

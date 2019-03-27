@@ -1,5 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+                /**/
+
+                ViewBag.Title = "Home Page";
 }
 
 <!DOCTYPE html>
@@ -40,7 +42,9 @@
                         {
                             <tr>
                                 <td>
-                                    <img src="@Html.Raw( "https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" />
+                                    <a href="@Url.Action("MovieDetails", "Home", new { Id = @item.id})">
+                                        <img src="@Html.Raw("https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" />
+                                    </a>
                                 </td>
                                 <td>
                                     <b>@item.title</b>
