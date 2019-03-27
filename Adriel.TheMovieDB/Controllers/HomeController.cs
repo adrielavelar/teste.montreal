@@ -30,12 +30,19 @@ namespace Adriel.TheMovieDB.Controllers
             return View();
         }
 
-        public ActionResult MovieDetails(long Id)
+        public ActionResult MovieDetails(long? Id = null)
         {
-            var movie = _movieController.GetMovieDetails(Id);
-            ViewBag.Movie = movie.Result;
+            if (Id != null)
+            {
+                var movie = _movieController.GetMovieDetails((long)Id);
+                ViewBag.Movie = movie.Result;
 
-            return View();
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         public ActionResult About()
