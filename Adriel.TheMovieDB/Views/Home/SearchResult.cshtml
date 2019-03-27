@@ -17,45 +17,57 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-
-                            </th>
-                            <th>
-                                Title
-                            </th>
-                            <th>
-                                Release Date
-                            </th>
-                            <th>
-                                Average
-                            </th>
-                            <th>
-                                Popularity
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in ViewBag.SearchListMovies)
-                        {
+                @if (ViewBag.SearchListMovies != null)
+                {
+                    <table class="table">
+                        <thead>
                             <tr>
-                                <td>
-                                    <img src="@Html.Raw( "https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" id="@item.id" />
-                                </td>
-                                <td>
-                                    <b>@item.title</b>
-                                    <br />
-                                    @item.overview
-                                </td>
-                                <td>@item.release_date</td>
-                                <td>@item.vote_average</td>
-                                <td>@item.popularity</td>
+                                <th>
+
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Release Date
+                                </th>
+                                <th>
+                                    Average
+                                </th>
+                                <th>
+                                    Popularity
+                                </th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.SearchListMovies)
+                            {
+                                <tr>
+                                    <td>
+                                        <img src="@Html.Raw( "https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" id="@item.id" />
+                                    </td>
+                                    <td>
+                                        <b>@item.title</b>
+                                        <br />
+                                        @item.overview
+                                    </td>
+                                    <td>@item.release_date</td>
+                                    <td>@item.vote_average</td>
+                                    <td>@item.popularity</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <br />
+                    <div class="alert alert-danger form-group">
+                        <p>
+                            No data.
+                        </p>
+                    </div>
+                }
             </div>
         </div>
         <div class="row">
@@ -79,7 +91,7 @@
             type: "post",
             data: { Id: id }
         }).done(function (data) {
-            
+
         })
     })
 </script>
