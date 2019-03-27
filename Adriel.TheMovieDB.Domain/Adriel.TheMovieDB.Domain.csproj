@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\DiscoverObject.cs" />
     <Compile Include="Entities\MovieDetails.cs" />
     <Compile Include="Entities\SearchObject.cs" />
     <Compile Include="MovieDB.cs" />

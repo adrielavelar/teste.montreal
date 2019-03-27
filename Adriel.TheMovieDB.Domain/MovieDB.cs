@@ -1,17 +1,14 @@
 ﻿using Adriel.TheMovieDB.Domain.Entities;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Adriel.TheMovieDB.Domain
 {
-    public class MovieDB
+    public class MovieDB : IDisposable
     {
-        private HttpClient _client = new HttpClient();
+        private readonly HttpClient _client = new HttpClient();
         private const string _apiKey = "api_key=0961f4c7add80bfa5712f9c620c0dec5";
 
         public async Task<SearchObject> Search(string text)
@@ -42,6 +39,28 @@ namespace Adriel.TheMovieDB.Domain
             {
                 throw ex;
             }
+        }
+
+        public async Task<DiscoverObject> DiscoverMovieWithReleaseDateGreaterOneYear()
+        {
+            try
+            {
+                var date = DateTime.Now.AddDays(-365).ToShortDateString();
+                var uri = $"https://api.themoviedb.org/3/discover/movie?{_apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&release_date.gte={date}";
+                var response = await _client.GetStringAsync(uri);
+                var result = JsonConvert.DeserializeObject<DiscoverObject>(response.Trim());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void Dispose()
+        {
+            _client.Dispose();
+            GC.SuppressFinalize(this);
         }
     }
 }
