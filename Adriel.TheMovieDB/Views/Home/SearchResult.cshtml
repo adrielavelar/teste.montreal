@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Search Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -36,11 +38,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in ViewBag.ListMovies)
+                        @foreach (var item in ViewBag.SearchListMovies)
                         {
                             <tr>
                                 <td>
-                                    <img src="@Html.Raw( "https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" />
+                                    <img src="@Html.Raw( "https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" id="@item.id" />
                                 </td>
                                 <td>
                                     <b>@item.title</b>
@@ -66,3 +68,19 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+    $("img").bind('click', function () {
+        var id = $("#id").val();
+        console.log(id);
+        debugger;
+        $.ajax({
+            url: "@Url.Action("MovieDetails","Home")",
+            type: "post",
+            data: { Id: id }
+        }).done(function (data) {
+            
+        })
+    })
+</script>
+

@@ -24,12 +24,12 @@
                     <a class="nav-link" href="#">Sobre <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <form class="form-inline" id="form1" method="post" action="~/Controllers/Home/Search">
+            <div class="form-inline form-group">
                 <input class="form-control mr-sm-2" type="text" id="txtSearch">
-                <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                <button class="btn btn-primary my-2 my-sm-0" id="btnSearch">
                     Search
                 </button>
-            </form>
+            </div>
         </div>
     </nav>
     <div class="container body-content">
@@ -47,13 +47,15 @@
 </html>
 
 <script type="text/javascript">
-    $("#form1").submit(function () {
+    $("#btnSearch").click(function () {
+        var text = $("#txtSearch").val();
+        debugger;
         $.ajax({
-            url: '@Url.Action("Search","Home")',
+            url: "@Url.Action("Search", "Home")",
             type: "post",
-            data: $("#txtSearch").serialize()
-        }).done(function (text) {
-
+            data: { Text: text }
+        }).done(function (data) {
+            window.location.href = data;
         })
     })
 </script>

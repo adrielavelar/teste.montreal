@@ -13,14 +13,32 @@ namespace Adriel.TheMovieDB.Controllers
 
         public ActionResult Index()
         {
-            var teste = _movieController.Search("batman");
-            var teste2 = _movieController.GetMovieDetails(343611);
+            var discoverMovies = _movieController.DiscoverMovieWithReleaseDateGreaterOneYear();
+            ViewBag.ListMovies = discoverMovies.Result.results;
 
             return View();
         }
 
-        public ActionResult Search(string text, FormCollection formCollection)
+        [HttpPost]
+        public ActionResult Search(string Text)
         {
+            var searchMovies = _movieController.Search(Text);
+            TempData["SearchListMovies"] = searchMovies.Result.results;
+
+            return Json(Url.Action("SearchResult", "Home"));
+        }
+
+        public ActionResult SearchResult()
+        {
+            ViewBag.SearchListMovies = TempData["SearchListMovies"];
+            return View();
+        }
+
+        public ActionResult MovieDetails(long Id)
+        {
+            var movie = _movieController.GetMovieDetails(Id);
+            ViewBag.Movie = movie;
+
             return View();
         }
 

@@ -9,3 +9,13 @@ C:\Users\adrie\source\repos\Adriel.TheMovieDB\Adriel.TheMovieDB.Domain\obj\Debug
 C:\Users\adrie\source\repos\Adriel.TheMovieDB\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CopyComplete
 C:\Users\adrie\source\repos\Adriel.TheMovieDB\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.dll
 C:\Users\adrie\source\repos\Adriel.TheMovieDB\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.pdb
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Adriel.TheMovieDB.Domain.dll
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Adriel.TheMovieDB.Domain.pdb
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CoreCompileInputs.cache
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CopyComplete
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.dll
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.pdb

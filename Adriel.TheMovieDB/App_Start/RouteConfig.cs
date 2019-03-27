@@ -18,6 +18,12 @@ namespace Adriel.TheMovieDB
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            //routes.MapRoute(
+            //    name: "Search",
+            //    url: "{controller}/{action}/{text}",
+            //    defaults: new { controller = "Home", action = "Search", text = UrlParameter.Optional }
+            //);
         }
     }
 }
