@@ -19,3 +19,4 @@ C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\
 C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CopyComplete
 C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.dll
 C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.pdb
+C:\Users\adriel.amaral\Documents\GitHub\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csprojAssemblyReference.cache
