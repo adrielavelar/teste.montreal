@@ -18,7 +18,7 @@ namespace Adriel.TheMovieDB.Domain
         {
             try
             {
-                var uri = $"https://api.themoviedb.org/3/search/movie?{_apiKey}&query={text}";
+                var uri = $"https://api.themoviedb.org/3/search/movie?{_apiKey}&language=pt-BR&query={text}";
 
                 var request = (HttpWebRequest)WebRequest.Create(uri);
                 request.Accept = "application/json";
@@ -44,7 +44,7 @@ namespace Adriel.TheMovieDB.Domain
         {
             try
             {
-                var uri = $"https://api.themoviedb.org/3/movie/{id}?{_apiKey}";
+                var uri = $"https://api.themoviedb.org/3/movie/{id}?{_apiKey}&language=pt-BR";
 
                 var request = (HttpWebRequest)WebRequest.Create(uri);
                 request.Accept = "application/json";
@@ -71,7 +71,7 @@ namespace Adriel.TheMovieDB.Domain
             try
             {
                 var date = DateTime.Now.AddDays(-365).ToString("yyyy-MM-dd");
-                var uri = $"https://api.themoviedb.org/3/discover/movie?{_apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&release_date.gte={date}";
+                var uri = $"https://api.themoviedb.org/3/discover/movie?{_apiKey}&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&release_date.gte={date}";
 
                 var request = (HttpWebRequest)WebRequest.Create(uri);
                 request.Accept = "application/json";

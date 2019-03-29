@@ -5,7 +5,7 @@ namespace Adriel.TheMovieDB.Controllers
 {
     public class HomeController : Controller
     {
-        private MovieDB _movieController = new MovieDB();
+        private readonly MovieDB _movieController = new MovieDB();
 
         public ActionResult Index()
         {
@@ -21,7 +21,7 @@ namespace Adriel.TheMovieDB.Controllers
             var searchMovies = _movieController.Search(Text);
             TempData["SearchListMovies"] = searchMovies.Result.results;
 
-            return Json(Url.Action("SearchResult", "Home"));
+            return Json(Url.Action(nameof(SearchResult), "Home"));
         }
 
         public ActionResult SearchResult()
@@ -41,7 +41,7 @@ namespace Adriel.TheMovieDB.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction(nameof(Index), "Home");
             }
         }
 
