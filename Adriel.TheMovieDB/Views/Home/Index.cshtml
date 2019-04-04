@@ -62,7 +62,7 @@
                                 <td>@item.vote_average</td>
                                 <td>@item.popularity</td>
                                 <td>
-                                    <input value="Esconder" type="button" class="btn btn-info" onclick="EsconderLinha(@item.id)"/>
+                                    <input value="Esconder" type="button" class="btn btn-info" onclick="HideRow(@item.id)"/>
                                 </td>
                             </tr>
                         }
@@ -78,9 +78,9 @@
 </html>
 
 <script type="text/javascript">
-    function EsconderLinha(id) {
-        var elemento = "id_tr_" + id;
-        var linha = document.getElementById(elemento);
-        linha.style.visibility = 'collapse';
+    function HideRow(id) {
+        var element = "id_tr_" + id;
+        var row = document.getElementById(element);
+        row.style.visibility = 'collapse';
     }
 </script>
