@@ -42,7 +42,7 @@ namespace Store.WS
             {
                 //aqui você trata o arquivo do jeito que vc preferir
             }
-
+            
             return processado;
         }
     }
