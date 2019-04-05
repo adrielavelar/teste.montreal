@@ -1,4 +1,6 @@
 ﻿using Adriel.TheMovieDB.Domain;
+using System.IO;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Adriel.TheMovieDB.Controllers
@@ -55,6 +57,37 @@ namespace Adriel.TheMovieDB.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult FileOfUpload()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FileOfUpload(HttpPostedFileBase postedFile)
+        {
+            var savedFiles = 0;
+            for (int i = 0; i < Request.Files.Count; i++)
+            {
+                var file = Request.Files[i];
+
+                if (file.ContentLength > 0)
+                {
+                    var uploadPath = Server.MapPath("~/Content/Uploads");
+
+                    if (!Directory.Exists(uploadPath))
+                        Directory.CreateDirectory(uploadPath);
+
+                    file.SaveAs(Path.Combine(uploadPath, file.FileName));
+                    savedFiles++;
+                }
+            }
+
+            if (savedFiles > 0)
+                ViewBag.Message = "File(s) uploaded(s) successfully.";
 
             return View();
         }
