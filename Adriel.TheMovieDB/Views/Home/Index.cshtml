@@ -35,12 +35,17 @@
                             <th>
                                 Popularity
                             </th>
+                            <th>
+                                Options
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in ViewBag.ListMovies)
                         {
-                            <tr>
+                            var @id = "id_tr_" + @item.id;
+
+                            <tr id="@id">
                                 <td>
                                     <a href="@Url.Action("MovieDetails", "Home", new { Id = @item.id})">
                                         <img src="@Html.Raw("https://image.tmdb.org/t/p/original" + item.poster_path)" width="100" />
@@ -56,6 +61,9 @@
                                 <td>@item.release_date</td>
                                 <td>@item.vote_average</td>
                                 <td>@item.popularity</td>
+                                <td>
+                                    <input value="Esconder" type="button" class="btn btn-info" onclick="HideRow(@item.id)"/>
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -68,3 +76,11 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+    function HideRow(id) {
+        var element = "id_tr_" + id;
+        var row = document.getElementById(element);
+        row.style.visibility = 'collapse';
+    }
+</script>
