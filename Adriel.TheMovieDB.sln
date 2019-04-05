@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adriel.TheMovieDB", "Adriel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adriel.TheMovieDB.Domain", "Adriel.TheMovieDB.Domain\Adriel.TheMovieDB.Domain.csproj", "{DA79319D-A4D2-42D8-A696-4FF0A74E520D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.WS", "Store.WS\Store.WS.csproj", "{086A0280-5E49-4BFF-B42C-060C7B9E90CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DA79319D-A4D2-42D8-A696-4FF0A74E520D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA79319D-A4D2-42D8-A696-4FF0A74E520D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA79319D-A4D2-42D8-A696-4FF0A74E520D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{086A0280-5E49-4BFF-B42C-060C7B9E90CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086A0280-5E49-4BFF-B42C-060C7B9E90CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086A0280-5E49-4BFF-B42C-060C7B9E90CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086A0280-5E49-4BFF-B42C-060C7B9E90CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

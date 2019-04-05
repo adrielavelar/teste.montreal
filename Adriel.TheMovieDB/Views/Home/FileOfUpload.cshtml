@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "File Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("FileOfUpload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <fieldset>
+        <div class="row col-form-label">
+            <div class="col-md-6 form-control">
+                <input type="file" name="postedFile" multiple="multiple" />
+            </div>
+        </div>
+        <div class="row col-form-label">
+            <div class="col-md-6">
+                <input type="submit" value="Enviar" class="btn btn-primary" />
+            </div>
+        </div>
+
+        <span style="color:green">@ViewBag.Message</span>
+    </fieldset>
+}
