@@ -31,3 +31,14 @@ C:\Users\adrie\source\repos\Adriel.TheMovieDB\teste.montreal\Adriel.TheMovieDB.D
 C:\Users\adrie\source\repos\Adriel.TheMovieDB\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CopyComplete
 C:\Users\adrie\source\repos\Adriel.TheMovieDB\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.dll
 C:\Users\adrie\source\repos\Adriel.TheMovieDB\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.pdb
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Adriel.TheMovieDB.Domain.dll
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Adriel.TheMovieDB.Domain.pdb
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\System.Net.Http.Formatting.dll
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\Newtonsoft.Json.xml
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\bin\Debug\System.Net.Http.Formatting.xml
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csprojAssemblyReference.cache
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.csproj.CopyComplete
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.dll
+C:\Projetos\teste.montreal\Adriel.TheMovieDB.Domain\obj\Debug\Adriel.TheMovieDB.Domain.pdb

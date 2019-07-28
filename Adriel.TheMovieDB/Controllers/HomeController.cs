@@ -37,7 +37,11 @@ namespace Adriel.TheMovieDB.Controllers
             if (Id != null)
             {
                 var movie = _movieController.GetMovieDetails((long)Id);
-                ViewBag.Movie = movie.Result;
+
+                if (movie.Status != System.Threading.Tasks.TaskStatus.Faulted)
+                    ViewBag.Movie = movie.Result;
+                else
+                    ViewBag.Movie = null;
 
                 return View();
             }

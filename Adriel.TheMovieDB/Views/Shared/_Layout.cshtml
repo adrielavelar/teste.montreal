@@ -28,7 +28,7 @@
                 </li>
             </ul>
             <div class="form-inline form-group">
-                <input class="form-control mr-sm-2" type="text" id="txtSearch">
+                <input class="form-control mr-sm-2" type="text" id="txtSearch" onkeypress="acionar(event);">
                 <button class="btn btn-primary my-2 my-sm-0" id="btnSearch">
                     Search
                 </button>
@@ -52,7 +52,22 @@
 <script type="text/javascript">
     $("#btnSearch").click(function () {
         var text = $("#txtSearch").val();
+        PesquisarFilme(text);
+    })
+</script>
+<script type="text/javascript">
+    function acionar(event) {
         debugger;
+        var tecla = event.keyCode;
+
+        if (tecla == 13) {
+            var text = $("#txtSearch").val();
+            PesquisarFilme(text);
+        }
+    }
+</script>
+<script>
+    function PesquisarFilme(text) {
         $.ajax({
             url: "@Url.Action("Search", "Home")",
             type: "post",
@@ -60,5 +75,5 @@
         }).done(function (data) {
             window.location.href = data;
         })
-    })
+    }
 </script>
